@@ -139,6 +139,7 @@ Infix Dylan
 .. code-block:: dylan
 
     define variable *foo* :: <string> = "abc";
+    define thread variable *baz* :: <integer> = 3;
     define constant $bar = 238;
 
 Prefix Dylan
@@ -149,6 +150,8 @@ Prefix Dylan
     (define-variable (*foo* <string>) "abc")
     (define-constant $bar 238)
 
+* No support for adjectives like ``thread``.
+
 Goo
 ---
 
@@ -157,6 +160,7 @@ Goo
     (dv *foo*|<string> "abc")
     (dv $bar 238)
 
+* No support for adjectives like ``thread``.
 * While docs indicated that ``(d. $bar 238)`` might yield a constant,
   I found no usage of that in the sources.
 
@@ -169,4 +173,5 @@ PLOT3
     def $bar = 238
 
 * Note that ``:=`` makes it a variable while ``=`` is for constants.
+* No support for adjectives like ``thread``.
 
